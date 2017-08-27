@@ -1,0 +1,11 @@
+<p>foo: {{foo}}</p>
+
+<script>
+	var foo = require( 'test' ).foo;
+
+	component.exports = {
+		data: function () {
+			return { foo: foo }
+		}
+	};
+</script>
