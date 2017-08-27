@@ -1,0 +1,5 @@
+{
+  "name": "ractive-loader-rv",
+  "version": "1.0.0",
+  "files": [ "src", "dist" ]
+}

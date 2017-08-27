@@ -1,0 +1,5 @@
+{
+  "name": "ractive-event-keys",
+  "version": "1.0.0",
+  "files": [ "src", "dist" ]
+}

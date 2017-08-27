@@ -1,0 +1,5 @@
+{
+  "name": "ractive-event-tap",
+  "version": "1.0.0",
+  "files": [ "src", "dist" ]
+}
