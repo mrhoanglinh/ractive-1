@@ -3,12 +3,14 @@
 
 # Dependencies
 node_modules/
-package-lock.json # for now
+package-lock.json
 
 # Build directories
-.gobble
-.gobble-build
-.gobble-watch
+.gobble/
+.gobble-build/
+.gobble-watch/
+tmp/
+dist/
 
 # Log files
 *.log
