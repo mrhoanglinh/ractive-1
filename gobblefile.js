@@ -23,12 +23,13 @@ module.exports = ({
     const distNodes = gobble([ esNodes, umdNodes, testNodes ])
     return gobble(distNodes)
   },
-  test: function () {
-    // TODO: build
-    // TODO: run tests each
-  },
-  bundle: function () {
-    // TODO: build
+  build: function () {
+    const transpiledNodes = packageNodes.map(transpile)
+    const umdNodes = transpiledNodes.map(bundleLibUmd).map(moveToPackageDir)
+    const esNodes = transpiledNodes.map(bundleLibEs).map(moveToPackageDir)
+    const testNodes = transpiledNodes.map(bundleTests).map(moveToPackageDir)
+    const distNodes = gobble([ esNodes, umdNodes, testNodes ])
+    return gobble(distNodes)
   }
 })[gobble.env()]()
 
@@ -47,36 +48,31 @@ function transpile (node) {
 }
 
 function bundleLibUmd (node, index) {
-  const packageName = packageNames[index]
-
   return node.transform('rollup', {
     entry: 'src/index.js',
-    dest: `dist/${packageName}.umd.js`,
+    dest: `lib.umd.js`,
     format: 'umd',
-    moduleName: packageName,
+    moduleName: packageNames[index],
     sourceMap: true
   })
 }
 
 function bundleLibEs (node, index) {
-  const packageName = packageNames[index]
-
   return node.transform('rollup', {
     entry: 'src/index.js',
-    dest: `dist/${packageName}.es.js`,
+    dest: `lib.es.js`,
     format: 'es',
     sourceMap: true
   })
 }
 
 function bundleTests (node, index) {
-  const packageName = packageNames[index]
-
   return node.transform('rollup', {
     entry: 'tests/index.js',
-    dest: `.tmp/tests.js`,
+    dest: `tests.iife.js`,
     format: 'iife',
-    moduleName: packageName
+    moduleName: packageNames[index],
+    sourceMap: true
   })
 }
 

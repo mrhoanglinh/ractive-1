@@ -5,12 +5,16 @@
 node_modules/
 package-lock.json
 
-# Build directories
+# Build by-products
 .gobble/
 .gobble-build/
 .gobble-watch/
-tmp/
-dist/
+*.umd.js
+*.umd.js.map
+*.es.js
+*.es.js.map
+*.iife.js
+*.iife.js.map
 
 # Log files
 *.log

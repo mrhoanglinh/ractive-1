@@ -36,6 +36,7 @@
   },
   "scripts": {
     "start": "npm run dev",
-    "dev": "gobble --env=dev serve"
+    "dev": "gobble --env=dev serve",
+    "build": "gobble --env=build build .tmp -f && cp -r .tmp/* packages && rm -rfv .tmp"
   }
 }
