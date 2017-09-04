@@ -1,5 +1,10 @@
 {
   "name": "ractive-event-hover",
   "version": "1.0.0",
-  "files": [ "src", "dist" ]
+  "files": [
+    "lib.umd.js",
+    "lib.es.js"
+  ],
+  "main": "lib.umd.js",
+  "module": "lib.es.js"
 }
