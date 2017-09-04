@@ -7,7 +7,7 @@ import RootModel from '../model/RootModel';
 import Hook from '../events/Hook';
 import getComputationSignature from './helpers/getComputationSignature';
 import subscribe from './helpers/subscribe';
-import Ractive from '../Ractive';
+import Ractive from '../index';
 import { ATTRIBUTE, INTERPOLATOR } from '../config/types';
 
 const constructHook = new Hook( 'construct' );

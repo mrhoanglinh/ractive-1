@@ -4,7 +4,7 @@ import config from './config/config';
 import Fragment from '../view/Fragment';
 import Hook from '../events/Hook';
 import HookQueue from '../events/HookQueue';
-import Ractive from '../Ractive';
+import Ractive from '../index';
 import subscribe from './helpers/subscribe';
 
 const configHook = new Hook( 'config' );

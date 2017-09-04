@@ -2,7 +2,7 @@
 /* eslint no-console:"off" */
 
 import { hasConsole } from '../config/environment';
-import Ractive from '../Ractive';
+import Ractive from '../index';
 import noop from './noop';
 
 const alreadyWarned = {};

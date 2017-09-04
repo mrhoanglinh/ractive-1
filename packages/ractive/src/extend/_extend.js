@@ -3,7 +3,7 @@ import config from '../Ractive/config/config';
 import dataConfigurator from '../Ractive/config/custom/data';
 import construct from '../Ractive/construct';
 import initialise from '../Ractive/initialise';
-import Ractive from '../Ractive';
+import Ractive from '../index';
 import isInstance from '../Ractive/static/isInstance';
 
 const callsSuper = /super\s*\(|\.call\s*\(\s*this/;
