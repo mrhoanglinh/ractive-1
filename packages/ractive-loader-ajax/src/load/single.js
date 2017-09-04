@@ -1,6 +1,6 @@
 import rcu from 'rcu';
 import get from '../utils/get';
-import load from '../load';
+import load from '../index';
 
 var promises = {},
 	global = ( typeof window !== 'undefined' ? window : {} );
